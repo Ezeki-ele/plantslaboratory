@@ -1,1 +1,7 @@
 <h1>My show page for a blog article </h1>
+
+<p>
+    Title: <%= @blog.title %>
+    Content: <%= @blog.content %>
+    Image: <%= image_tag ("#{@blog.image}.jpg") %>
+</p>

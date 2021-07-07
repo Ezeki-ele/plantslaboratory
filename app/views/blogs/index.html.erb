@@ -1,1 +1,9 @@
 <h1>My index page for listing the blog articles </h1>
+    
+<% @blog.map do |a| %>
+<div class="blog-article">
+    <%= a.title %>
+    <%= a.content %>
+    <%= image_tag ("#{a.image}.jpg"), :class => "blog_style_image" %>
+</div>
+<% end %>
