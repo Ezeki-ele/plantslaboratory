@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   end
 
   resources :orders, only: [:destroy, :show, :index] 
-  
+  resources :blogs, only: [:index, :show, :new, :update, :destroy] 
+
 end
