@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
     def index
-        @blog = Blog.all
+        @blogs = Blog.all
     end
 
     def show
@@ -16,7 +16,14 @@ class BlogsController < ApplicationController
         @blog.save
     end
 
+    def edit
+        @blog = Blog.find(params[:id])
+    end
+
     def update
+        @blog = Blog.find(params[:id])
+        @blog.update(blog_params)
+        redirect_to blog_path(@blog)
     end
 
     def destroy
